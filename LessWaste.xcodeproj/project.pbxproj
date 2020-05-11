@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		148D048C24522C3600840A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048B24522C3600840A74 /* AppDelegate.swift */; };
+		148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048D24522C3600840A74 /* SceneDelegate.swift */; };
+		148D049024522C3600840A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048F24522C3600840A74 /* ViewController.swift */; };
+		148D049324522C3600840A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148D049124522C3600840A74 /* Main.storyboard */; };
+		148D049524522C3D00840A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148D049424522C3D00840A74 /* Assets.xcassets */; };
+		148D049824522C3D00840A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148D049624522C3D00840A74 /* LaunchScreen.storyboard */; };
+		52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LessWaste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		148D048824522C3600840A74 /* LessWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		148D048B24522C3600840A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		148D048D24522C3600840A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		148D048F24522C3600840A74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		148D049224522C3600840A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		148D049424522C3D00840A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		148D049724522C3D00840A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		148D049924522C3D00840A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.release.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.release.xcconfig"; sourceTree = "<group>"; };
+		B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.debug.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		148D048524522C3600840A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		148D047F24522C3600840A74 = {
+			isa = PBXGroup;
+			children = (
+				148D048A24522C3600840A74 /* LessWaste */,
+				148D048924522C3600840A74 /* Products */,
+				43E871FF607D301DFF7237A1 /* Pods */,
+				C384C1250A343B0743E5D172 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		148D048924522C3600840A74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				148D048824522C3600840A74 /* LessWaste.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		148D048A24522C3600840A74 /* LessWaste */ = {
+			isa = PBXGroup;
+			children = (
+				148D048B24522C3600840A74 /* AppDelegate.swift */,
+				148D048D24522C3600840A74 /* SceneDelegate.swift */,
+				148D048F24522C3600840A74 /* ViewController.swift */,
+				148D049124522C3600840A74 /* Main.storyboard */,
+				148D049424522C3D00840A74 /* Assets.xcassets */,
+				148D049624522C3D00840A74 /* LaunchScreen.storyboard */,
+				148D049924522C3D00840A74 /* Info.plist */,
+			);
+			path = LessWaste;
+			sourceTree = "<group>";
+		};
+		43E871FF607D301DFF7237A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */,
+				184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C384C1250A343B0743E5D172 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		148D048724522C3600840A74 /* LessWaste */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 148D049C24522C3D00840A74 /* Build configuration list for PBXNativeTarget "LessWaste" */;
+			buildPhases = (
+				D9D503E990233E7D67923E57 /* [CP] Check Pods Manifest.lock */,
+				148D048424522C3600840A74 /* Sources */,
+				148D048524522C3600840A74 /* Frameworks */,
+				148D048624522C3600840A74 /* Resources */,
+				5EB6DD116F9CB13D5FB183D3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LessWaste;
+			productName = LessWaste;
+			productReference = 148D048824522C3600840A74 /* LessWaste.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		148D048024522C3600840A74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Héctor David Hernández Rodríguez";
+				TargetAttributes = {
+					148D048724522C3600840A74 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 148D048324522C3600840A74 /* Build configuration list for PBXProject "LessWaste" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 148D047F24522C3600840A74;
+			productRefGroup = 148D048924522C3600840A74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				148D048724522C3600840A74 /* LessWaste */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		148D048624522C3600840A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148D049824522C3D00840A74 /* LaunchScreen.storyboard in Resources */,
+				148D049524522C3D00840A74 /* Assets.xcassets in Resources */,
+				148D049324522C3600840A74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EB6DD116F9CB13D5FB183D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LessWaste/Pods-LessWaste-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LessWaste/Pods-LessWaste-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LessWaste/Pods-LessWaste-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D503E990233E7D67923E57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LessWaste-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		148D048424522C3600840A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				148D049024522C3600840A74 /* ViewController.swift in Sources */,
+				148D048C24522C3600840A74 /* AppDelegate.swift in Sources */,
+				148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		148D049124522C3600840A74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148D049224522C3600840A74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		148D049624522C3D00840A74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				148D049724522C3D00840A74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		148D049A24522C3D00840A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		148D049B24522C3D00840A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		148D049D24522C3D00840A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4GQJSRRWX;
+				INFOPLIST_FILE = LessWaste/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hd170998.LessWaste;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		148D049E24522C3D00840A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4GQJSRRWX;
+				INFOPLIST_FILE = LessWaste/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hd170998.LessWaste;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		148D048324522C3600840A74 /* Build configuration list for PBXProject "LessWaste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148D049A24522C3D00840A74 /* Debug */,
+				148D049B24522C3D00840A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		148D049C24522C3D00840A74 /* Build configuration list for PBXNativeTarget "LessWaste" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				148D049D24522C3D00840A74 /* Debug */,
+				148D049E24522C3D00840A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 148D048024522C3600840A74 /* Project object */;
+}
