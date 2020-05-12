@@ -198,8 +198,11 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CLTypingLabel/CLTypingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/abseil/absl.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework"
@@ -209,8 +212,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CLTypingLabel/CLTypingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/abseil/absl.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework"

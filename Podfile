@@ -7,5 +7,8 @@ target 'LessWaste' do
   # Pods for LessWaste
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Cloudinary', '~> 2.0'
+  pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'IQKeyboardManagerSwift'
 
 end

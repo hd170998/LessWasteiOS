@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		148D048C24522C3600840A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048B24522C3600840A74 /* AppDelegate.swift */; };
 		148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048D24522C3600840A74 /* SceneDelegate.swift */; };
-		148D049024522C3600840A74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048F24522C3600840A74 /* ViewController.swift */; };
+		148D049024522C3600840A74 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D048F24522C3600840A74 /* WelcomeViewController.swift */; };
 		148D049324522C3600840A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148D049124522C3600840A74 /* Main.storyboard */; };
 		148D049524522C3D00840A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148D049424522C3D00840A74 /* Assets.xcassets */; };
 		148D049824522C3D00840A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148D049624522C3D00840A74 /* LaunchScreen.storyboard */; };
+		14E4DC9D246A4DF100EEB9C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E4DC9C246A4DF100EEB9C4 /* GoogleService-Info.plist */; };
+		14E4DC9F246A51F800EEB9C4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DC9E246A51F800EEB9C4 /* RegisterViewController.swift */; };
+		14E4DCA1246A523500EEB9C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCA0246A523500EEB9C4 /* LoginViewController.swift */; };
+		14E4DCA3246A54A100EEB9C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCA2246A54A100EEB9C4 /* Constants.swift */; };
+		14E4DCA5246A56D000EEB9C4 /* RecetasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCA4246A56D000EEB9C4 /* RecetasViewController.swift */; };
 		52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +26,16 @@
 		148D048824522C3600840A74 /* LessWaste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessWaste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148D048B24522C3600840A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		148D048D24522C3600840A74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		148D048F24522C3600840A74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		148D048F24522C3600840A74 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		148D049224522C3600840A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148D049424522C3D00840A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148D049724522C3D00840A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		148D049924522C3D00840A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14E4DC9C246A4DF100EEB9C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14E4DC9E246A51F800EEB9C4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		14E4DCA0246A523500EEB9C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		14E4DCA2246A54A100EEB9C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		14E4DCA4246A56D000EEB9C4 /* RecetasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetasViewController.swift; sourceTree = "<group>"; };
 		184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.release.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.release.xcconfig"; sourceTree = "<group>"; };
 		B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.debug.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,13 +75,26 @@
 			children = (
 				148D048B24522C3600840A74 /* AppDelegate.swift */,
 				148D048D24522C3600840A74 /* SceneDelegate.swift */,
-				148D048F24522C3600840A74 /* ViewController.swift */,
+				14E4DC97246A49D500EEB9C4 /* Controller */,
 				148D049124522C3600840A74 /* Main.storyboard */,
 				148D049424522C3D00840A74 /* Assets.xcassets */,
 				148D049624522C3D00840A74 /* LaunchScreen.storyboard */,
+				14E4DC9C246A4DF100EEB9C4 /* GoogleService-Info.plist */,
 				148D049924522C3D00840A74 /* Info.plist */,
+				14E4DCA2246A54A100EEB9C4 /* Constants.swift */,
 			);
 			path = LessWaste;
+			sourceTree = "<group>";
+		};
+		14E4DC97246A49D500EEB9C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				148D048F24522C3600840A74 /* WelcomeViewController.swift */,
+				14E4DCA0246A523500EEB9C4 /* LoginViewController.swift */,
+				14E4DC9E246A51F800EEB9C4 /* RegisterViewController.swift */,
+				14E4DCA4246A56D000EEB9C4 /* RecetasViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		43E871FF607D301DFF7237A1 /* Pods */ = {
@@ -80,7 +103,6 @@
 				B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */,
 				184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				148D049824522C3D00840A74 /* LaunchScreen.storyboard in Resources */,
+				14E4DC9D246A4DF100EEB9C4 /* GoogleService-Info.plist in Resources */,
 				148D049524522C3D00840A74 /* Assets.xcassets in Resources */,
 				148D049324522C3600840A74 /* Main.storyboard in Resources */,
 			);
@@ -207,9 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148D049024522C3600840A74 /* ViewController.swift in Sources */,
+				148D049024522C3600840A74 /* WelcomeViewController.swift in Sources */,
 				148D048C24522C3600840A74 /* AppDelegate.swift in Sources */,
 				148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */,
+				14E4DCA1246A523500EEB9C4 /* LoginViewController.swift in Sources */,
+				14E4DC9F246A51F800EEB9C4 /* RegisterViewController.swift in Sources */,
+				14E4DCA3246A54A100EEB9C4 /* Constants.swift in Sources */,
+				14E4DCA5246A56D000EEB9C4 /* RecetasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
