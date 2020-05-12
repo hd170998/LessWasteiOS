@@ -98,7 +98,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-z4-wca">
-                                        <rect key="frame" x="97" y="17" width="181" height="34"/>
+                                        <rect key="frame" x="97" y="17" width="181" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -129,7 +129,6 @@
                                     <constraint firstAttribute="trailing" secondItem="TgC-5q-t9Z" secondAttribute="trailing" id="4sq-nM-kbO"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="8" id="5cM-iN-7ea"/>
                                     <constraint firstAttribute="trailing" secondItem="nRi-HP-1Dk" secondAttribute="trailing" id="BE0-U2-62X"/>
-                                    <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="GuG-z4-wca" secondAttribute="bottom" constant="50" id="FIR-ND-tP0"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" id="Pbx-Ke-V00"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="8" id="TUH-u9-ig0"/>
                                     <constraint firstItem="Vm8-qZ-S3R" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="24" id="WOP-d6-siA"/>
