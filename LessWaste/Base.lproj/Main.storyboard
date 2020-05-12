@@ -88,7 +88,20 @@
                                         <rect key="frame" x="8" y="193" width="359" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="nrh-6V-i1p" eventType="touchUpInside" id="oO0-kG-xAU"/>
+                                        </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-z4-wca">
+                                        <rect key="frame" x="97" y="17" width="181" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-qZ-S3R">
+                                        <rect key="frame" x="97" y="117" width="181" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -96,14 +109,22 @@
                                     <constraint firstAttribute="trailing" secondItem="TgC-5q-t9Z" secondAttribute="trailing" id="4sq-nM-kbO"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="8" id="5cM-iN-7ea"/>
                                     <constraint firstAttribute="trailing" secondItem="nRi-HP-1Dk" secondAttribute="trailing" id="BE0-U2-62X"/>
+                                    <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="GuG-z4-wca" secondAttribute="bottom" constant="50" id="FIR-ND-tP0"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" id="Pbx-Ke-V00"/>
                                     <constraint firstItem="TgC-5q-t9Z" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="8" id="TUH-u9-ig0"/>
+                                    <constraint firstItem="Vm8-qZ-S3R" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="24" id="WOP-d6-siA"/>
+                                    <constraint firstItem="GuG-z4-wca" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" constant="97" id="XEE-M3-Var"/>
                                     <constraint firstItem="3he-MG-K3k" firstAttribute="top" secondItem="nRi-HP-1Dk" secondAttribute="bottom" constant="100" id="Xrg-ZM-g5e"/>
                                     <constraint firstItem="3he-MG-K3k" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" constant="8" id="b9Z-s5-oBK"/>
                                     <constraint firstItem="nRi-HP-1Dk" firstAttribute="top" secondItem="eTO-72-CAe" secondAttribute="top" id="bxO-Ku-rhE"/>
+                                    <constraint firstAttribute="trailing" secondItem="GuG-z4-wca" secondAttribute="trailing" constant="97" id="c8G-Ap-wPb"/>
                                     <constraint firstAttribute="trailing" secondItem="3he-MG-K3k" secondAttribute="trailing" constant="8" id="dwm-VZ-cS7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vm8-qZ-S3R" secondAttribute="trailing" constant="97" id="oe6-QK-kIe"/>
+                                    <constraint firstItem="3he-MG-K3k" firstAttribute="top" secondItem="Vm8-qZ-S3R" secondAttribute="bottom" constant="42" id="onA-bZ-wY9"/>
                                     <constraint firstAttribute="bottom" secondItem="3he-MG-K3k" secondAttribute="bottom" id="pC2-HD-KgU"/>
+                                    <constraint firstItem="Vm8-qZ-S3R" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" constant="97" id="pca-Do-0Ll"/>
                                     <constraint firstItem="nRi-HP-1Dk" firstAttribute="leading" secondItem="eTO-72-CAe" secondAttribute="leading" id="rfg-4c-5FE"/>
+                                    <constraint firstItem="GuG-z4-wca" firstAttribute="top" secondItem="eTO-72-CAe" secondAttribute="top" constant="17" id="x6f-u3-bJP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -118,6 +139,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="sOx-1b-FTH"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="GuG-z4-wca" id="MoA-sY-PYP"/>
+                        <outlet property="loginPressed" destination="3he-MG-K3k" id="nNU-5G-g0R"/>
+                        <outlet property="passwordTextfield" destination="Vm8-qZ-S3R" id="Gr0-gD-s0U"/>
                         <segue destination="CKL-Dx-cKZ" kind="show" identifier="LoginToApp" id="0QK-ni-goO"/>
                     </connections>
                 </viewController>
@@ -195,6 +219,9 @@
                                         <rect key="frame" x="0.0" y="94" width="375" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="vyT-Du-BBf" eventType="touchUpInside" id="auB-0G-mEe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,6 +250,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="mAi-qz-baH"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="qpu-c3-7BS" id="mr4-9N-U2i"/>
+                        <outlet property="passwordTextfield" destination="dyH-bX-2GS" id="3vj-DC-a93"/>
                         <segue destination="CKL-Dx-cKZ" kind="show" identifier="RegisterToApp" id="Mzm-ee-gHi"/>
                     </connections>
                 </viewController>
@@ -250,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0QK-ni-goO"/>
+        <segue reference="Mzm-ee-gHi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="textfield" width="298" height="93"/>
