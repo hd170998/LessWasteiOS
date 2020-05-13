@@ -23,6 +23,7 @@
 		14E4DCB1246B11E500EEB9C4 /* Receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCB0246B11E500EEB9C4 /* Receta.swift */; };
 		14E4DCB9246BAACA00EEB9C4 /* Saturday.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14E4DCB8246BAACA00EEB9C4 /* Saturday.ttf */; };
 		52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */; };
+		61E3470C246BBFF800672B25 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3470B246BBFF800672B25 /* Producto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		14E4DCB0246B11E500EEB9C4 /* Receta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receta.swift; sourceTree = "<group>"; };
 		14E4DCB8246BAACA00EEB9C4 /* Saturday.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Saturday.ttf; sourceTree = "<group>"; };
 		184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.release.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.release.xcconfig"; sourceTree = "<group>"; };
+		61E3470B246BBFF800672B25 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.debug.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				14E4DCB0246B11E500EEB9C4 /* Receta.swift */,
+				61E3470B246BBFF800672B25 /* Producto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				14E4DC9F246A51F800EEB9C4 /* RegisterViewController.swift in Sources */,
 				14E4DCAE246A8F2900EEB9C4 /* LoginViewController.swift in Sources */,
 				14E4DCA3246A54A100EEB9C4 /* Constants.swift in Sources */,
+				61E3470C246BBFF800672B25 /* Producto.swift in Sources */,
 				14E4DCA5246A56D000EEB9C4 /* RecetasViewController.swift in Sources */,
 				14E4DCAB246A757200EEB9C4 /* RecetaCell.swift in Sources */,
 			);
