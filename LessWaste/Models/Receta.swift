@@ -14,5 +14,4 @@ struct Receta {
     let ytLink: String
     let imageLink : String
     
-    
 }
