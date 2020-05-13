@@ -8,7 +8,9 @@
 
 import Foundation
 struct K {
-    static let appName = "LessWaste🥡"
+    static let appName = "👩🏻‍🍳 LessWaste"
+    static let cellNibName = "RecetaCell"
+    static let cellIdentifier = "ReusableCell"
     static let registerSegue = "RegisterToApp"
     static let loginSegue = "LoginToApp"
     struct FStore {

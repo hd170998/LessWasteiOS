@@ -20,6 +20,7 @@
 		14E4DCAB246A757200EEB9C4 /* RecetaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCA9246A757200EEB9C4 /* RecetaCell.swift */; };
 		14E4DCAC246A757200EEB9C4 /* RecetaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E4DCAA246A757200EEB9C4 /* RecetaCell.xib */; };
 		14E4DCAE246A8F2900EEB9C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCAD246A8F2900EEB9C4 /* LoginViewController.swift */; };
+		14E4DCB1246B11E500EEB9C4 /* Receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCB0246B11E500EEB9C4 /* Receta.swift */; };
 		52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		14E4DCA9246A757200EEB9C4 /* RecetaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetaCell.swift; sourceTree = "<group>"; };
 		14E4DCAA246A757200EEB9C4 /* RecetaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecetaCell.xib; sourceTree = "<group>"; };
 		14E4DCAD246A8F2900EEB9C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		14E4DCB0246B11E500EEB9C4 /* Receta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receta.swift; sourceTree = "<group>"; };
 		184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.release.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.release.xcconfig"; sourceTree = "<group>"; };
 		B8E3F32341FEA2E6E62C50FD /* Pods-LessWaste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.debug.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 		148D048A24522C3600840A74 /* LessWaste */ = {
 			isa = PBXGroup;
 			children = (
+				14E4DCAF246B101500EEB9C4 /* Models */,
 				148D048B24522C3600840A74 /* AppDelegate.swift */,
 				148D048D24522C3600840A74 /* SceneDelegate.swift */,
 				14E4DC97246A49D500EEB9C4 /* Controller */,
@@ -109,6 +112,14 @@
 				14E4DCAA246A757200EEB9C4 /* RecetaCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		14E4DCAF246B101500EEB9C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14E4DCB0246B11E500EEB9C4 /* Receta.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		43E871FF607D301DFF7237A1 /* Pods */ = {
@@ -245,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E4DCB1246B11E500EEB9C4 /* Receta.swift in Sources */,
 				148D049024522C3600840A74 /* WelcomeViewController.swift in Sources */,
 				148D048C24522C3600840A74 /* AppDelegate.swift in Sources */,
 				148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */,

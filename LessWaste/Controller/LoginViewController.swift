@@ -19,7 +19,9 @@ class LoginViewController: UIViewController {
         if let email = emailTextfield.text, let password = passwordTextfield.text{
             Auth.auth().signIn(withEmail: email, password: password) {  authResult, error in
                 if let e = error{
-                    print(e)
+                    let alert = UIAlertController(title: "Something happened", message: e.localizedDescription.description, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }else{
                     self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }

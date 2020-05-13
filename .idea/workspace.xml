@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34a3902a-44c9-4099-ba55-c2f94591da95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LessWaste/Assets.xcassets/logo.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LessWaste/Assets.xcassets/logo.imageset/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LessWaste/Assets.xcassets/logo.imageset/Logo@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LessWaste/Assets.xcassets/logo.imageset/Logo@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LoginViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LessWaste/Models/Receta.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/Constants.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Constants.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/Controller/LoginViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Controller/LoginViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/Controller/RecetasViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Controller/RecetasViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/Controller/RegisterViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Controller/RegisterViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/View/RecetaCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/View/RecetaCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LessWaste/View/RecetaCell.xib" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/View/RecetaCell.xib" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/LessWaste-cwwvtmyfanhyfhchfzfgfvupjbxr/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,7 +108,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1013000" />
+    <option name="totallyTimeSpent" value="1634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />

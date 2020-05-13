@@ -10,8 +10,14 @@ import UIKit
 
 class RecetaCell: UITableViewCell {
 
+    @IBOutlet weak var recetaBubble: UIView!
+    @IBOutlet weak var titleReceta: UILabel!
+    @IBOutlet weak var creatorReceta: UILabel!
+    @IBOutlet weak var imageReceta: UIImageView!
+    @IBOutlet weak var likeCount: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageReceta.layer.cornerRadius = imageReceta.frame.height / 5
         // Initialization code
     }
 
@@ -21,4 +27,8 @@ class RecetaCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func likePressed(_ sender: UIButton) {
+    }
+    @IBAction func savedPressed(_ sender: UIButton) {
+    }
 }
