@@ -10,5 +10,5 @@ target 'LessWaste' do
   pod 'Cloudinary', '~> 2.0'
   pod 'CLTypingLabel', '~> 0.4.0'
   pod 'IQKeyboardManagerSwift'
-
+  pod 'SDWebImage', '~> 5.0'
 end
