@@ -15,6 +15,7 @@ struct K {
     static let loginSegue = "LoginToApp"
     struct FStore {
         static let collectionName = "recetas"
+        static let recetaTitle = "titulo"
         static let senderField = "usuario"
         static let bodyField = "body"
         static let imageLink = "imageLink"
