@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34a3902a-44c9-4099-ba55-c2f94591da95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LessWaste/Controller/AddRecipeViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste/Constants.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Constants.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste/Controller/LoginViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Controller/LoginViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LessWaste/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/LessWaste/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/A01374009.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/A01374009.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/LessWaste-cwwvtmyfanhyfhchfzfgfvupjbxr/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,23 +12,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_00008030-001509213A88802E" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LessWaste/Controller/WelcomeViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="75" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LessWaste/Controller/LoginViewController.swift">
+        <entry file="file://$PROJECT_DIR$/LessWaste/Info.plist">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="308">
+              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -81,6 +66,12 @@
             </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="LessWaste" type="1d218c8b:XcodeProjectNode" />
+              <item name="LessWaste" type="fcab9f18:XcodeViewNode" />
+              <item name="Models" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
               <item name="Pods" type="1d218c8b:XcodeProjectNode" />
             </path>
           </expand>
@@ -107,7 +98,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.LessWaste">
+    <configuration name="ActiveLabel" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="ActiveLabel" CONFIG_NAME="Debug" SCHEME_NAME="ActiveLabel" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Cloudinary" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Cloudinary" CONFIG_NAME="Debug" SCHEME_NAME="Cloudinary" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FirebaseDatabase" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="FirebaseDatabase" CONFIG_NAME="Debug" SCHEME_NAME="FirebaseDatabase" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LessWaste" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LessWaste" TARGET_NAME="LessWaste" CONFIG_NAME="Debug" SCHEME_NAME="LessWaste" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="LessWaste" RUN_TARGET_NAME="LessWaste" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -117,6 +135,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="YouTubeVideoPlayer" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="YouTubeVideoPlayer" CONFIG_NAME="Debug" SCHEME_NAME="YouTubeVideoPlayer" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LessWaste" />
+      <item itemvalue="Application.ActiveLabel" />
+      <item itemvalue="Application.Cloudinary" />
+      <item itemvalue="Application.FirebaseDatabase" />
+      <item itemvalue="Application.YouTubeVideoPlayer" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -130,6 +164,7 @@
       <updated>1589259555974</updated>
       <workItem from="1589259561715" duration="1013000" />
       <workItem from="1589344285967" duration="117000" />
+      <workItem from="1591225188818" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1589259670615</created>
@@ -152,17 +187,23 @@
       <option name="project" value="LOCAL" />
       <updated>1589344317418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;2da entrega&quot;">
+      <created>1591225287843</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591225287843</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2487000" />
+    <option name="totallyTimeSpent" value="2735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="703" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -188,7 +229,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="font, login page" />
     <MESSAGE value="pod installation for GIFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="pod installation for GIFS" />
+    <MESSAGE value="&quot;2da entrega&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;2da entrega&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LessWaste/Controller/WelcomeViewController.swift">
@@ -202,6 +244,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LessWaste/Info.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
         </state>
       </provider>
     </entry>
