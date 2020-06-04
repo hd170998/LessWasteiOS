@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         window = UIWindow()
-        //window?.rootViewController = LoginVC()
+        window?.rootViewController = LoginVC()
         
         return true
     }

@@ -6,9 +6,9 @@ target 'LessWaste' do
 
   # Pods for LessWaste
   pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'CLTypingLabel', '~> 0.4.0'
   pod 'IQKeyboardManagerSwift'
-  pod 'SDWebImage', '~> 5.0'
+  pod 'YouTubeVideoPlayer', '1.1'
+  pod 'ActiveLabel'
 end
