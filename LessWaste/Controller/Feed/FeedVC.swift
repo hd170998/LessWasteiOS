@@ -240,6 +240,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
             self.collectionView?.reloadData()
         }
     }
+    
 
 
 }

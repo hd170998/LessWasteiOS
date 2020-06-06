@@ -63,13 +63,13 @@ class Post {
     }
     func adjustLikes(addLike: Bool, completion: @escaping(Int) -> ()) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
-        
-        // UPDATE: Unwrap post id to work with firebase
         guard let postId = self.postId else { return }
         
         if addLike {
             // Actualiza tabla user-likes
             USER_LIKES_REF.child(currentUid).updateChildValues([postId: 1], withCompletionBlock: { (err, ref) in
+                //manda actualizaciones a
+                self.sendLikeNotificationToServer()
                 // Actualiza tabla post-likes
                 POST_LIKES_REF.child(self.postId).updateChildValues([currentUid: 1], withCompletionBlock: { (err, ref) in
                     self.likes = self.likes + 1
@@ -80,6 +80,14 @@ class Post {
             })
         }else{
             USER_LIKES_REF.child(currentUid).child(postId).observeSingleEvent(of: .value, with: { (snapshot) in
+                //borra cualquier notificacion de la receta
+                if let notificationID = snapshot.value as? String {
+                    NOTIFICATIONS_REF.child(self.ownerUid).child(notificationID).removeValue(completionBlock: { (err, ref) in
+                        self.removeLike(withCompletion: { (likes) in
+                            completion(likes)
+                        })
+                    })
+                }
                 self.removeLike(withCompletion: { (likes) in
                     completion(likes)
                 })
@@ -99,5 +107,22 @@ class Post {
                 completion(self.likes)
             })
         })
+    }
+    func sendLikeNotificationToServer() {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let creationDate = Int(NSDate().timeIntervalSince1970)
+        
+        if currentUid != self.ownerUid {
+            let values = ["checked": 0,
+                          "creationDate": creationDate,
+                          "uid": currentUid,
+                          "type": LIKE_INT_VALUE,
+                          "postId": postId!] as [String : Any]
+            
+            let notificationRef = NOTIFICATIONS_REF.child(self.ownerUid).childByAutoId()
+            notificationRef.updateChildValues(values, withCompletionBlock: { (err, ref) in
+                USER_LIKES_REF.child(currentUid).child(self.postId).setValue(notificationRef.key)
+            })
+        }
     }
 }

@@ -95,23 +95,23 @@ extension Date {
         
         if secondsAgo < minute {
             quotient = secondsAgo
-            unit = "SECOND"
+            unit = "Segundos"
         } else if secondsAgo < hour {
             quotient = secondsAgo / minute
-            unit = "MIN"
+            unit = "Min"
         } else if secondsAgo < day {
             quotient = secondsAgo / hour
-            unit = "HOUR"
+            unit = "Horas"
         } else if secondsAgo < week {
             quotient = secondsAgo / day
-            unit = "DAY"
+            unit = "Dias"
         } else if secondsAgo < month {
             quotient = secondsAgo / week
-            unit = "WEEK"
+            unit = "sem"
         } else {
             quotient = secondsAgo / month
-            unit = "MONTH"
+            unit = "meses"
         }
-        return "\(quotient) \(unit)\(quotient == 1 ? "" : "S") AGO"
+        return "Hace \(quotient) \(unit)\(quotient == 1 ? "" : "S")"
     }
 }

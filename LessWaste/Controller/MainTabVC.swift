@@ -59,7 +59,6 @@ class MainTabVC: UITabBarController, UITabBarControllerDelegate{
                 let loginVC = LoginVC()
                 let navController = UINavigationController(rootViewController: loginVC)
                 
-                // UPDATE: iOS 13 presentation fix
                 navController.modalPresentationStyle = .fullScreen
                 
                 self.present(navController, animated: true, completion: nil)
