@@ -67,6 +67,7 @@ class User{
             USER_FEED_REF.child(currentUid).child(postId).removeValue()
         }
     }
+    
     func checkIfUserIsFollowed(completion: @escaping(Bool) ->()) {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         

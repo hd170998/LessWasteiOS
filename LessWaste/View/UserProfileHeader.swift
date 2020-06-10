@@ -94,21 +94,15 @@ class UserProfileHeader: UICollectionViewCell {
         return button
     }()
     
-    let gridButton: UIButton = {
+    lazy var gridButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "square.grid.2x2"), for: .normal)
         
         return button
     }()
     
-    let listButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "list.bullet"), for: .normal)
-        button.tintColor = UIColor(white: 0, alpha: 0.8)
-        return button
-    }()
     
-    let bookmarkButton: UIButton = {
+    lazy var bookmarkButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "bookmark"), for: .normal)
         button.tintColor = UIColor(white: 0, alpha: 0.8)
@@ -152,7 +146,7 @@ class UserProfileHeader: UICollectionViewCell {
         let bottomDividerView = UIView()
         bottomDividerView.backgroundColor = .lightGray
         
-        let stackView = UIStackView(arrangedSubviews: [gridButton, listButton, bookmarkButton])
+        let stackView = UIStackView(arrangedSubviews: [gridButton, bookmarkButton])
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually

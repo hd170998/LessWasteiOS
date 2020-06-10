@@ -53,13 +53,10 @@ class NotificationsVC: UITableViewController, NotificationCellDelegate {
         guard let user = cell.notification?.user else { return }
         
         if user.isFollowed {
-            
-            // handle unfollow user
             user.unfollow()
             cell.followButton.configure(didFollow: false)
         } else {
-            
-            // handle follow user
+        
             user.follow()
             cell.followButton.configure(didFollow: true)
         }

@@ -18,6 +18,7 @@ class FeedCell: UICollectionViewCell {
             guard let ownerUid = post?.ownerUid else { return }
             guard let imageUrl = post?.imageUrl else { return }
             guard let likes = post?.likes else { return }
+            guard let titulo = post?.caption else {return}
             
             Database.fetchUser(with: ownerUid) { (user) in
                 self.profileImageView.loadImage(with: user.profileImageUrl)
@@ -25,8 +26,10 @@ class FeedCell: UICollectionViewCell {
             }
             postImageView.loadImage(with: imageUrl)
             configureLikeButton()
+            configureSaveButton()
             likesLabel.text = "\(likes) Me gusta"
             postTimeLabel.text = post?.creationDate.timeAgoToDisplay()
+            captionLabel.text = titulo
         }
     }
 
@@ -90,6 +93,7 @@ class FeedCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "bookmark"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(handleSaveTapped), for: .touchUpInside)
         return button
         
     }()
@@ -107,7 +111,7 @@ class FeedCell: UICollectionViewCell {
     }()
     lazy var captionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.text = "bla bla bla"
         
         return label
@@ -171,6 +175,9 @@ class FeedCell: UICollectionViewCell {
     @objc func handleLikeTapped() {
         delegate?.handleLikeTapped(for: self, isDoubleTap: false)
     }
+    @objc func handleSaveTapped() {
+        delegate?.handleSaveTapped(for: self, isDoubleTap: false)
+    }
     
     @objc func handleCommentTapped() {
         delegate?.handleCommentTapped(for: self)
@@ -189,6 +196,9 @@ class FeedCell: UICollectionViewCell {
     
     func configureLikeButton() {
         delegate?.handleConfigureLikeButton(for: self)
+    }
+    func configureSaveButton() {
+        delegate?.handleConfigureSaveButton(for: self)
     }
     
     func configureCommentIndicatorView() {

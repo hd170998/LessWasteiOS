@@ -19,9 +19,9 @@ class Post {
     var postId: String!
     var user: User?
     var didLike = false
+    var didSave = false
     var description: String!
     var link: String!
-    var ingridients: String!
     
     init(postId: String!, user: User, dictionary: Dictionary<String, AnyObject>) {
         
@@ -51,10 +51,6 @@ class Post {
         
         if let description = dictionary["descripcion"] as? String {
             self.description = description
-        }
-        
-        if let ingridients = dictionary["ingridients"] as? String {
-            self.ingridients = ingridients
         }
         
         if let link = dictionary["link"] as? String {
@@ -108,6 +104,33 @@ class Post {
             })
         })
     }
+    func adjustSaved(save: Bool, completion: @escaping(Int) -> ()) {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        guard let postId = self.postId else { return }
+        
+        if save {
+            // Actualiza tabla user-likes
+            USER_SAVED_REF.child(currentUid).updateChildValues([postId: 1], withCompletionBlock: { (err, ref) in
+                // Actualiza tabla post-likes
+                self.didSave = true
+            })
+        }else{
+            USER_SAVED_REF.child(currentUid).child(postId).observeSingleEvent(of: .value, with: { (snapshot) in
+                
+            
+                self.removeSave(withCompletion: { (likes) in
+                    completion(likes)
+                })
+            })
+        }
+    }
+    func removeSave(withCompletion completion: @escaping (Int) -> ()) {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        USER_SAVED_REF.child(currentUid).child(self.postId).removeValue(completionBlock: { (err, ref) in
+            self.didSave = false
+        })
+    }
     func sendLikeNotificationToServer() {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         let creationDate = Int(NSDate().timeIntervalSince1970)
@@ -124,5 +147,48 @@ class Post {
                 USER_LIKES_REF.child(currentUid).child(self.postId).setValue(notificationRef.key)
             })
         }
+    }
+    func deletePost() {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        Storage.storage().reference(forURL: self.imageUrl).delete(completion: nil)
+        
+        USER_FOLLOWER_REF.child(currentUid).observe(.childAdded) { (snapshot) in
+            let followerUid = snapshot.key
+            USER_FEED_REF.child(followerUid).child(self.postId).removeValue()
+        }
+        
+        USER_FEED_REF.child(currentUid).child(postId).removeValue()
+        
+        USER_POSTS_REF.child(currentUid).child(postId).removeValue()
+        
+        POST_LIKES_REF.child(postId).observe(.childAdded) { (snapshot) in
+            let uid = snapshot.key
+            
+            USER_LIKES_REF.child(uid).child(self.postId).observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let notificationId = snapshot.value as? String else { return }
+                
+                NOTIFICATIONS_REF.child(self.ownerUid).child(notificationId).removeValue(completionBlock: { (err, ref) in
+                    
+                    POST_LIKES_REF.child(self.postId).removeValue()
+                    
+                    USER_LIKES_REF.child(uid).child(self.postId).removeValue()
+                })
+            })
+        }
+        
+        let words = description.components(separatedBy: .whitespacesAndNewlines)
+        for var word in words {
+            if word.hasPrefix("#") {
+                
+                word = word.trimmingCharacters(in: .punctuationCharacters)
+                word = word.trimmingCharacters(in: .symbols)
+                
+                HASHTAG_POST_REF.child(word).child(postId).removeValue()
+            }
+        }
+        
+        COMMENT_REF.child(postId).removeValue()
+        POSTS_REF.child(postId).removeValue()
     }
 }

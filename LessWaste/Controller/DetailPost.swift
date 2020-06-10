@@ -8,6 +8,8 @@
 
 import UIKit
 import YouTubeVideoPlayer
+import ActiveLabel
+import Firebase
 
 class DetailPost: UIViewController {
     // MARK: - Properties
@@ -15,10 +17,13 @@ class DetailPost: UIViewController {
     var post: Post?{
         didSet{
             guard let caption = post?.caption else{return}
+            guard let ownerUid = post?.ownerUid else { return }
             guard let description = post?.description else {return}
-            guard let ingridients = post?.ingridients else {return}
             guard let ytLink = post?.link else {return}
             guard let imageUrl = post?.imageUrl else { return }
+            Database.fetchUser(with: ownerUid) { (user) in
+                self.configurePostCaption(user: user)
+            }
             
             postImageView.loadImage(with: imageUrl)
             titleLabel.text = caption
@@ -42,11 +47,10 @@ class DetailPost: UIViewController {
         return label
         
     }()
-    lazy var descriptionLabel : UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .lightGray
-        label.text = "Cargando"
+    lazy var descriptionLabel : ActiveLabel = {
+        let label = ActiveLabel()
+        label.numberOfLines = 0
+        
         return label
     }()
     let videoContainerView: UIView = {
@@ -68,12 +72,12 @@ class DetailPost: UIViewController {
         view.backgroundColor = .white
         view.addSubview(postImageView)
         
-        postImageView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 300)
+        postImageView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 250)
         view.addSubview(titleLabel)
         
-        titleLabel.anchor(top: postImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: 0)
+        titleLabel.anchor(top: postImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 5, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: 0)
         view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, paddingTop: 20, paddingLeft: 20, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        descriptionLabel.anchor(top: titleLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 0, height: 300)
         view.addSubview(videoContainerView)
         videoContainerView.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 50, paddingRight: 0, width: 0, height: 200)
         let player : YouTubeVideoPlayer = .shared
@@ -99,5 +103,38 @@ class DetailPost: UIViewController {
         navigationController?.navigationBar.backgroundColor = .lightGray
         
         
+    }
+    func configurePostCaption(user: User) {
+        guard let post = self.post else { return }
+        guard let caption = post.description else { return }
+        
+        
+        // enable username as custom type
+        descriptionLabel.enabledTypes = [.mention, .hashtag, .url]
+        
+        // configure usnerame link attributes
+        descriptionLabel.configureLinkAttribute = { (type, attributes, isSelected) in
+            var atts = attributes
+            
+            switch type {
+            case .custom:
+                atts[NSAttributedString.Key.font] = UIFont.boldSystemFont(ofSize: 12)
+            default: ()
+            }
+            return atts
+        }
+        
+        descriptionLabel.customize { (label) in
+            label.text = "\(caption)"
+            label.font = UIFont.systemFont(ofSize: 12)
+            label.textColor = .black
+            label.handleHashtagTap { (hashtag) in
+                let hashtagController = HastagController(collectionViewLayout: UICollectionViewFlowLayout())
+                hashtagController.hashtag = hashtag.lowercased()
+                
+                self.navigationController?.pushViewController(hashtagController, animated: true)
+            }
+            descriptionLabel.numberOfLines = 0
+        }
     }
 }

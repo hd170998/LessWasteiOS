@@ -42,6 +42,9 @@
 		14D89B23248886DB008381FF /* CommentInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B22248886DB008381FF /* CommentInputAccesoryView.swift */; };
 		14D89B252488874A008381FF /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B242488874A008381FF /* InputTextView.swift */; };
 		14D89B27248887B9008381FF /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B26248887B8008381FF /* NotificationCell.swift */; };
+		14D89B2B249074CB008381FF /* SearchPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B2A249074CB008381FF /* SearchPostCell.swift */; };
+		14D89B2D2490E170008381FF /* HastagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B2C2490E170008381FF /* HastagController.swift */; };
+		14D89B2F2490E27E008381FF /* HashtagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D89B2E2490E27E008381FF /* HashtagCell.swift */; };
 		14E4DC9D246A4DF100EEB9C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14E4DC9C246A4DF100EEB9C4 /* GoogleService-Info.plist */; };
 		14E4DCA3246A54A100EEB9C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4DCA2246A54A100EEB9C4 /* Constants.swift */; };
 		52F06F9B20F62A2600E09A08 /* Pods_LessWaste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12301E73B7485B45008E5CB3 /* Pods_LessWaste.framework */; };
@@ -86,6 +89,9 @@
 		14D89B22248886DB008381FF /* CommentInputAccesoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputAccesoryView.swift; sourceTree = "<group>"; };
 		14D89B242488874A008381FF /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		14D89B26248887B8008381FF /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		14D89B2A249074CB008381FF /* SearchPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostCell.swift; sourceTree = "<group>"; };
+		14D89B2C2490E170008381FF /* HastagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HastagController.swift; sourceTree = "<group>"; };
+		14D89B2E2490E27E008381FF /* HashtagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagCell.swift; sourceTree = "<group>"; };
 		14E4DC9C246A4DF100EEB9C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14E4DCA2246A54A100EEB9C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184D87D3B78CE74E0DB24EA5 /* Pods-LessWaste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LessWaste.release.xcconfig"; path = "Target Support Files/Pods-LessWaste/Pods-LessWaste.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 			children = (
 				14D89AEB24886C13008381FF /* FeedVC.swift */,
 				14D89AED24886C54008381FF /* CommentVC.swift */,
+				14D89B2C2490E170008381FF /* HastagController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -240,6 +247,8 @@
 				14D89B17248884C8008381FF /* SelectPhotoHeader.swift */,
 				14D89B19248884F0008381FF /* UserPostCell.swift */,
 				14D89B1B2488852F008381FF /* FeedCell.swift */,
+				14D89B2A249074CB008381FF /* SearchPostCell.swift */,
+				14D89B2E2490E27E008381FF /* HashtagCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				14D89AEC24886C13008381FF /* FeedVC.swift in Sources */,
 				148D048E24522C3600840A74 /* SceneDelegate.swift in Sources */,
 				14D89AF124886CA3008381FF /* SearchVC.swift in Sources */,
+				14D89B2F2490E27E008381FF /* HashtagCell.swift in Sources */,
 				14D89B212488867B008381FF /* CommentCell.swift in Sources */,
 				14D89AFF24886FEB008381FF /* FollowLikeVC.swift in Sources */,
 				14D89B0524887057008381FF /* Comment.swift in Sources */,
@@ -405,10 +415,12 @@
 				14D89B102488826A008381FF /* UserProfileHeader.swift in Sources */,
 				14D89AE4248869F2008381FF /* MainTabVC.swift in Sources */,
 				14D89B162488846F008381FF /* SelectPhotoCell.swift in Sources */,
+				14D89B2B249074CB008381FF /* SearchPostCell.swift in Sources */,
 				14D89B23248886DB008381FF /* CommentInputAccesoryView.swift in Sources */,
 				14D89B0124887014008381FF /* User.swift in Sources */,
 				14D89AF924886EA0008381FF /* NotificationsVC.swift in Sources */,
 				14D89B142488834A008381FF /* FollowLikeCell.swift in Sources */,
+				14D89B2D2490E170008381FF /* HastagController.swift in Sources */,
 				14D89AE924886B39008381FF /* SignUpVC.swift in Sources */,
 				14D89B0324887030008381FF /* Post.swift in Sources */,
 				14D89AF724886DED008381FF /* SelectImageVC.swift in Sources */,

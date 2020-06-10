@@ -10,21 +10,27 @@ import UIKit
 import Firebase
 
 class UploadPostViewController: UIViewController, UITextViewDelegate {
+    
+    enum UploadAction: Int {
+           case UploadPost
+           case SaveChanges
+           
+           init(index: Int) {
+               switch index {
+               case 0: self = .UploadPost
+               case 1: self = .SaveChanges
+               default: self = .UploadPost
+               }
+        }
+        
+    }
+    var uploadAction: UploadAction!
     var selectedImage: UIImage?
+    var postToEdit: Post?
     
     let captionField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Nombre tu creacion"
-        tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
-        tf.borderStyle = .roundedRect
-        tf.font = UIFont.systemFont(ofSize: 14)
-        tf.autocapitalizationType = .sentences
-        return tf
-    }()
-    
-    let ingridientsField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Escribe todos los ingredientes"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
@@ -76,6 +82,10 @@ class UploadPostViewController: UIViewController, UITextViewDelegate {
         actionButton.isEnabled = true
         actionButton.backgroundColor = UIColor(red: 17/255, green: 154/255, blue: 237/255, alpha: 1)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureViewController(forUploadAction: uploadAction)
+    }
     
     // MARK: VIewConfig
     
@@ -94,25 +104,76 @@ class UploadPostViewController: UIViewController, UITextViewDelegate {
         captionField.anchor(top: view.topAnchor, left: photoImageView.rightAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 92, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 0, height: 46)
         view.addSubview(ytField)
         ytField.anchor(top: captionField.bottomAnchor, left: photoImageView.rightAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 8, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 0, height: 46)
-        view.addSubview(ingridientsField)
-        ingridientsField.anchor(top: ytField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 0, height: 50)
         view.addSubview(descriptionTextView)
-        descriptionTextView.anchor(top: ingridientsField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 0, height: 100)
+        descriptionTextView.anchor(top: ytField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 10, paddingLeft: 12, paddingBottom: 0, paddingRight: 12, width: 0, height: 100)
         view.addSubview(actionButton)
         actionButton.anchor(top: descriptionTextView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: 40)
+    }
+    // MARK: Configuradores
+    @objc func handleUploadAction() {
+        buttonSelector(uploadAction: uploadAction)
+    }
+    
+    func buttonSelector(uploadAction: UploadAction) {
+        switch uploadAction {
+            case .UploadPost:
+                handleUploadPost()
+            case .SaveChanges:
+                handleSavePostChanges()
+        }
+    }
+    func configureViewController(forUploadAction uploadAction: UploadAction) {
+        if uploadAction == .SaveChanges {
+            guard let post = self.postToEdit else { return }
+            actionButton.setTitle("Guardar Cambios", for: .normal)
+            self.navigationItem.title = "Editar Receta"
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancelar", style: .plain, target: self, action: #selector(handleCancel))
+            navigationController?.navigationBar.tintColor = .black
+            photoImageView.loadImage(with: post.imageUrl)
+            descriptionTextView.text = post.description
+            captionField.text = post.caption
+            ytField.text = post.link
+            
+        } else {
+            actionButton.setTitle("Compartir", for: .normal)
+            self.navigationItem.title = "Subir receta"
+        }
     }
     func loadImage() {
         guard let selectedImage = self.selectedImage else { return }
         photoImageView.image = selectedImage
     }
     // MARK: Handlers
-    @objc func handleUploadAction() {
+    func handleSavePostChanges() {
+        guard let post = self.postToEdit else { return }
+        guard let updatedCaption = captionField.text else { return }
+        guard let updateDescription = descriptionTextView.text else {return}
+        guard let updateLink = ytField.text else {return}
+        
+        
+        if updateDescription.contains("#") {
+            self.uploadHashtagToServer(withPostId: post.postId)
+        }
+        
+        POSTS_REF.child(post.postId).child("caption").setValue(updatedCaption) { (err, ref) in
+            POSTS_REF.child(post.postId).child("descripcion").setValue(updateDescription){(err, ref) in
+                POSTS_REF.child(post.postId).child("link").setValue(updateLink){(err, ref) in
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+            }
+        }
+    }
+    @objc func handleCancel() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func handleUploadPost() {
         guard
             let caption = captionField.text,
             let postImg = photoImageView.image,
             let currentUid = Auth.auth().currentUser?.uid,
             let ytLink = ytField.text,
-            let ingridients = ingridientsField.text,
             let description = descriptionTextView.text
             
         else { return }
@@ -134,7 +195,6 @@ class UploadPostViewController: UIViewController, UITextViewDelegate {
                     "imageUrl":imageURL,
                     "ownerUid": currentUid,
                     "link":ytLink,
-                    "ingridients":ingridients,
                     "descripcion":description
                 ] as [String: Any]
                 
@@ -147,6 +207,11 @@ class UploadPostViewController: UIViewController, UITextViewDelegate {
                     userPostsRef.updateChildValues([postKey: 1])
                     // update user-feed structure
                     self.updateUserFeeds(with: postKey)
+                    
+                    // upload hashtag to server
+                    if description.contains("#") {
+                        self.uploadHashtagToServer(withPostId: postKey)
+                    }
                     
                     self.dismiss(animated: true, completion: {
                         self.tabBarController?.selectedIndex = 0
@@ -165,5 +230,19 @@ class UploadPostViewController: UIViewController, UITextViewDelegate {
         }
         
         USER_FEED_REF.child(currentUid).updateChildValues(values)
+    }
+    func uploadHashtagToServer(withPostId postId: String) {
+        guard let caption = descriptionTextView.text else{return}
+        let words: [String] = caption.components(separatedBy: .whitespacesAndNewlines)
+        
+        for var word in words {
+            if word.hasPrefix("#") {
+                word = word.trimmingCharacters(in: .punctuationCharacters)
+                word = word.trimmingCharacters(in: .symbols)
+                
+                let hashtagValues = [postId: 1]
+                HASHTAG_POST_REF.child(word.lowercased()).updateChildValues(hashtagValues)
+            }
+        }
     }
 }

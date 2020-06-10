@@ -169,7 +169,19 @@ class UserProfileVC: UICollectionViewController, UICollectionViewDelegateFlowLay
             header.postsLabel.attributedText = attributedText
         }
     }
-
+    // MARK: Actualizadoes
+    @objc func handleRefresh() {
+        posts.removeAll(keepingCapacity: false)
+        self.currentKey = nil
+        fetchPosts()
+        collectionView?.reloadData()
+    }
+    
+    func configureRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        collectionView?.refreshControl = refreshControl
+    }
     
     // MARK: API
     func fetchPosts() {

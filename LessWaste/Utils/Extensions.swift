@@ -112,6 +112,6 @@ extension Date {
             quotient = secondsAgo / month
             unit = "meses"
         }
-        return "Hace \(quotient) \(unit)\(quotient == 1 ? "" : "S")"
+        return "Hace \(quotient) \(unit)\(quotient == 1 ? "" : "")"
     }
 }

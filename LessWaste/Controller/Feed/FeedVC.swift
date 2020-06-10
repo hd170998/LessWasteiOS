@@ -18,6 +18,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     var post: Post?
     var currentKey: String?
     var userProfileController: UserProfileVC?
+    
 
     override func viewDidLoad() {
         self.collectionView?.backgroundColor = .white
@@ -109,7 +110,35 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
     }
     
     func handleOptionsTapped(for cell: FeedCell) {
-        print("options")
+        guard let post = cell.post else { return }
+        if post.ownerUid == Auth.auth().currentUser?.uid {
+            let alertController = UIAlertController(title: "Opciones", message: nil, preferredStyle: .actionSheet)
+            
+            alertController.addAction(UIAlertAction(title: "Borrar Publicacion", style: .destructive, handler: { (_) in
+                post.deletePost()
+                
+                if !self.viewSinglePost {
+                    self.handleRefresh()
+                } else {
+                    if let userProfileController = self.userProfileController {
+                        _ = self.navigationController?.popViewController(animated: true)
+                        userProfileController.handleRefresh()
+                    }
+                }
+            }))
+            
+            alertController.addAction(UIAlertAction(title: "Editar publicacion", style: .default, handler: { (_) in
+                
+                let uploadPostController = UploadPostViewController()
+                let navigationController = UINavigationController(rootViewController: uploadPostController)
+                uploadPostController.postToEdit = post
+                uploadPostController.uploadAction = UploadPostViewController.UploadAction(index: 1)
+                self.present(navigationController, animated: true, completion: nil)
+            }))
+            
+            alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
     }
     
     func handleLikeTapped(for cell: FeedCell, isDoubleTap: Bool) {
@@ -133,6 +162,28 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
                 cell.likeButton.tintColor = .red
             })
         }
+    }
+    func handleSaveTapped(for cell: FeedCell, isDoubleTap: Bool){
+        guard let post = cell.post else { return }
+        if post.didSave {
+            // quitar el like
+            if !isDoubleTap {
+                post.adjustSaved(save: false, completion: { (likes) in
+                    print("got here")
+                })
+                cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                cell.saveButton.tintColor = .black
+            }
+        } else {
+            // poner el like
+            post.adjustSaved(save: true, completion: { (likes) in
+                print("and here")
+                
+            })
+            cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            cell.saveButton.tintColor = .black
+        }
+        
     }
     
     func handleCommentTapped(for cell: FeedCell) {
@@ -159,6 +210,23 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
             }
         }
     }
+    func handleConfigureSaveButton(for cell: FeedCell) {
+        guard let post = cell.post else { return }
+        guard let postId = post.postId else { return }
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        
+        USER_SAVED_REF.child(currentUid).observeSingleEvent(of: .value) { (snapshot) in
+            
+            // Revisa si el usuario en sesion salvo una receta
+            if snapshot.hasChild(postId) {
+                post.didSave = true
+                cell.saveButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            } else {
+                post.didSave = false
+                cell.saveButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+            }
+        }
+    }
     
     func handleShowLikes(for cell: FeedCell) {
         guard let post = cell.post else { return }
@@ -178,6 +246,7 @@ class FeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout, Fe
         detailPostVC.post = cell.post
         navigationController?.pushViewController(detailPostVC, animated: true)
     }
+    
     
     @objc func handleItems(){
         

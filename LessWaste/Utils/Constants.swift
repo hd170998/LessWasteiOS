@@ -32,15 +32,12 @@ let USER_POSTS_REF = DB_REF.child("user-posts")
 let USER_FEED_REF = DB_REF.child("user-feed")
 
 let USER_LIKES_REF = DB_REF.child("user-likes")
+let USER_SAVED_REF = DB_REF.child("user-saved")
 let POST_LIKES_REF = DB_REF.child("post-likes")
 
 let COMMENT_REF = DB_REF.child("comments")
 
 let NOTIFICATIONS_REF = DB_REF.child("notifications")
-
-let MESSAGES_REF = DB_REF.child("messages")
-let USER_MESSAGES_REF = DB_REF.child("user-messages")
-let USER_MESSAGE_NOTIFICATIONS_REF = DB_REF.child("user-message-notifications")
 
 let HASHTAG_POST_REF = DB_REF.child("hashtag-post")
 
